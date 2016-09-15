@@ -7,25 +7,33 @@ body {
   overflow: hidden;
   margin: 0 auto;
 }
+.octodex {
+  overflow: hidden;
+  padding-left: 0;
+}
 .arrow-down {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #dbdbdb;
-  float: right;
   overflow: hidden;
-  margin-left: -19px;
-  margin-top: -3px;
-  margin-right: 5px;
+  position: absolute;
+  right: 5px;
+  bottom: 36px;
+}
+.octonumber:before {
+  content: "#";
+  display: inline;
 }
 /********** Images ***********/
-ul .gitHubImg {
+li.octocat {
   float: left;
   width: 30%;
-  overflow: hidden;
-  margin-left: 15px;
+  margin-left: 30px;
   border-bottom: #dbdbdb solid 1px;
+  list-style: none;
+  position: relative;
 }
 a img {
   width: 100%;
@@ -40,6 +48,9 @@ footer img {
 footer cite {
   float: right;
 }
+footer {
+  margin-top: -4px;
+}
 /********** Font & Main ***********/
 .octonumber {
   color: #dbdbdb;
@@ -50,8 +61,10 @@ footer cite {
   font-size: 13px;
 }
 /********** Authors ***********/
-cite p {
+cite, cite p {
   float: left;
+}
+cite p {
   font: 13px;
   font-style: normal;
   font-weight: bold;
@@ -60,9 +73,12 @@ cite p {
 cite a {
   color: black;
   text-decoration: none;
+  list-style: none;
+}
+.authors, .authors li {
+  float: right;
 }
 .authors {
-  float: right;
   list-style: none;
   padding-left: 8px;
   margin-top: 10px;
